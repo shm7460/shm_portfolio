@@ -156,7 +156,7 @@ p {
 
 #home {
   position: relative;
-  height: 90vh;
+  height: 75vh;
   background-color: var(--color-black);
 }
 .home__container {
@@ -167,25 +167,15 @@ p {
   width: 685px;
 }
 .home__title {
-  margin-bottom: 30px;
-  font-size: 56px;
-}
-.home__container span {
-  font-size: 56px;
-  font-weight: 600;
   margin-bottom: 20px;
-}
-.home__title,
-.home__description {
-  color: var(--color-white);
-}
-.home__container span {
+  font-size: 60px;
   color: white;
 }
-.top-border {
-  width: 35%;
-  height: 1px;
-  border-top: 1px solid rgb(216, 216, 216);
+.home__container span {
+  font-size: inherit;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: inherit;
 }
 .home__description {
   color: var(--color-green);
@@ -193,15 +183,15 @@ p {
   font-size: var(--font-medium);
   padding-top: 10px;
   letter-spacing: 1px;
+  margin-bottom: 30px;
 }
 .home__contact {
   color: rgb(226, 226, 226);
-  font-size: var(--font-regular);
+  font-size: 20px;
   font-weight: var(--weight-semi-bold);
-  padding: 10px 15px;
+  padding: 12px 25px;
   border: 1px solid var(--color-light-grey);
   border-radius: var(--size-border-radius);
-  margin-bottom: 50px;
 }
 
 .home__contact:hover {
@@ -211,7 +201,7 @@ p {
 
 /* Mouse Wheele */
 .mouse {
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,14 +209,13 @@ p {
   width: 42px;
   height: 55px;
   border-radius: 30px;
-  margin-top: 20%;
+  right: 35px;
+  bottom: 25px;
 }
-.wheele {
+.mouse i {
   position: absolute;
-  width: 4px;
-  height: 15px;
-  border: 2px solid rgb(59, 59, 59);
-  border-radius: 5px;
+  color: rgb(68, 68, 68);
+  font-size: 20px;
   animation: wheele 1.5s linear infinite;
 }
 @keyframes wheele {
