@@ -1,7 +1,0 @@
-.preloader > div {
-  font-size: 100px;
-}
-.counter:after {
-  content: "%";
-  font-size: 0.5em;
-}
