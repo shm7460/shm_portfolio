@@ -103,6 +103,14 @@ p {
   color: var(--color-black);
   margin: 4px 0px;
 }
+/* navbar__meun  "black" addclass */
+#navbar .black {
+  color: #000000;
+}
+#navbar .black .active {
+  border: 1px solid var(--color-white);
+  background-color: #00e068;
+}
 
 /* Nabar */
 #navbar {
@@ -120,10 +128,11 @@ p {
   flex-direction: column;
   align-items: center;
   padding: 10px 5px;
+  transition: 0.3s;
 }
 
 .navbar__meun__item {
-  padding: 5% 15%;
+  padding: 10% 18%;
   margin: 5px 4px;
   cursor: pointer;
   text-align: center;
