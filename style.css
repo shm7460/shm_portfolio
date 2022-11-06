@@ -105,14 +105,6 @@ p {
   color: var(--color-black);
   margin: 4px 0px;
 }
-/* navbar__meun  "black" addclass */
-#navbar .black {
-  color: #000000;
-}
-#navbar .black .active {
-  border: 1px solid var(--color-white);
-  background-color: #00e068;
-}
 
 /* Nabar */
 #navbar {
@@ -120,34 +112,34 @@ p {
   right: 0;
   display: flex;
   justify-content: end;
-  color: var(--color-white);
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
+  opacity: 0;
 }
 .navbar__meun {
+  color: var(--color-green);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 5px;
+  padding: 10px 15px;
   transition: 0.3s;
 }
 
 .navbar__meun__item {
-  padding: 10% 18%;
+  padding: 15% 25%;
   margin: 5px 4px;
   cursor: pointer;
   text-align: center;
-  border: 1px solid transparent;
   border-radius: var(--size-border-radius);
+  font-size: 20px;
+  font-weight: 600;
 }
 .navbar__meun__item.active {
-  border: 1px solid var(--color-white);
   background-color: #00e06836;
 }
 .navbar__meun__item:hover {
-  border: 1px solid var(--color-white);
-  background-color: var(--color-green);
+  background-color: white;
   border-radius: var(--size-border-radius);
 }
 
@@ -215,6 +207,38 @@ p {
 .home__contact:hover {
   background-color: var(--color-green);
   color: var(--color-white);
+}
+
+/* Mouse Wheele */
+.mouse {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(68, 68, 68);
+  width: 42px;
+  height: 55px;
+  border-radius: 30px;
+  margin-top: 20%;
+}
+.wheele {
+  position: absolute;
+  width: 4px;
+  height: 15px;
+  border: 2px solid rgb(59, 59, 59);
+  border-radius: 5px;
+  animation: wheele 1.5s linear infinite;
+}
+@keyframes wheele {
+  0% {
+    top: 10px;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 10px;
+  }
 }
 
 /* About */
@@ -669,8 +693,8 @@ p {
     background-color: var(--color-pink);
   }
 
-  #navbar.navbar--dark {
-    padding: 16px;
+  #navba.navbar--dark {
+    color: #73aace !important;
   }
 
   .navbar__meun {

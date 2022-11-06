@@ -1,7 +1,5 @@
 // 비상식적인 언어를 브라우저가 발견하게 해줌
 "use strict";
-//현재 위치를 기억하여 새로고침시 그자리를 유지한다.
-history.scrollRestoration = "auto";
 
 $(function () {
   /* TypeIt1 - Welcome */
@@ -45,18 +43,6 @@ $(function () {
   });
 });
 
-//Make navbar transparent when it is on the top
-// 클래스 이름을 조건에 따라 추가하고 제거하기
-const navbar = document.querySelector("#navbar");
-const navbarHeight = navbar.getBoundingClientRect().height;
-document.addEventListener("scroll", () => {
-  if (window.scrollY > navbarHeight) {
-    navbar.classList.add("navbar--dark");
-  } else {
-    navbar.classList.remove("navbar--dark");
-  }
-});
-
 // Handle scrolling when tapping on the navbar menu
 // 메뉴를 클릭하면 선택한 메뉴 페이지로 이동
 const navbarMenu = document.querySelector(".navbar__meun");
@@ -84,10 +70,13 @@ homeContactBtn.addEventListener("click", () => {
 
 // Make home slowly fade to transparent as the window scrolls down
 // 홈화면을 스크롤하면 점점 투명해진다
+const navbar = document.querySelector("#navbar");
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
+  // 홈화면 스크롤하면 메뉴바 보이게하기
+  navbar.style.opacity = 1 + window.scrollY / homeHeight;
 });
 
 // Show "arrow up" button when scrolling down
