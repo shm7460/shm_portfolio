@@ -11,15 +11,7 @@ $(function () {
     autoStart: true, // 자동 재생 사용
     breakLines: false, // 줄 바꿈 사용안함
   });
-  // Video Modal
-  $(".open-modal").click(function () {
-    $(".video-modal").fadeIn();
-    $("body").addClass("active");
-  });
-  $(".close-modal").click(function () {
-    $(".video-modal").fadeOut();
-    $("body").removeClass("active");
-  });
+
   // skills -counter
   $(".counter").each(function () {
     // .counter에 각각 적용
