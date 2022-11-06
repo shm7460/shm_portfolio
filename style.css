@@ -328,7 +328,17 @@ p {
 .icon-box:nth-child(2) .skills-percent li:nth-of-type(2) {
   margin-right: 3%;
 }
-
+.skills-percent {
+  animation: count 1s linear both;
+}
+@keyframes count {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* Work */
 #work .section__container {
   display: flex;
