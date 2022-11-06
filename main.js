@@ -1,5 +1,8 @@
 // 비상식적인 언어를 브라우저가 발견하게 해줌
 "use strict";
+//현재 위치를 기억하여 새로고침시 그자리를 유지한다.
+history.scrollRestoration = "auto";
+
 $(function () {
   /* TypeIt1 - Welcome */
   $("#typing1").typeIt({
@@ -8,7 +11,15 @@ $(function () {
     autoStart: true, // 자동 재생 사용
     breakLines: false, // 줄 바꿈 사용안함
   });
-
+  // Video Modal
+  $(".open-modal").click(function () {
+    $(".video-modal").fadeIn();
+    $("body").addClass("active");
+  });
+  $(".close-modal").click(function () {
+    $(".video-modal").fadeOut();
+    $("body").removeClass("active");
+  });
   // skills -counter
   $(".counter").each(function () {
     // .counter에 각각 적용
