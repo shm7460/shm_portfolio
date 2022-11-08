@@ -132,7 +132,7 @@ p {
   cursor: pointer;
   text-align: center;
   border-radius: var(--size-border-radius);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
 }
 .navbar__meun__item.active {
