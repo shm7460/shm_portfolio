@@ -1,0 +1,487 @@
+/* 모바일의 최대크기가 768px이다 */
+@media (max-width: 768px) {
+  /* Entire Layout 전체 레이아웃*/
+  .cd-section {
+    height: auto;
+  }
+  .cd-section > div {
+    height: auto;
+  }
+  .content {
+    /* position으로 가면 inline-block으로변경되서 너비값을 줘야함 */
+    /* style.css에서 position의 absolute는 여전히 상속되고 있기 때문에 static로 포지션속성을 없애줘야됨 */
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+  /* Header */
+  header {
+    transition: 0.5s;
+    z-index: 1;
+  }
+  header.active {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+  }
+  .gnb {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    top: 0;
+    right: -250px;
+    background-color: white;
+    /* 가로 세로 퍼짐 색 */
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+  }
+  .gnb.active {
+    right: 0;
+  }
+  .gnb-inner {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: transparent;
+  }
+  .logo {
+    transform: scale(0.8);
+  }
+  .menu {
+    display: block;
+    /* 부모요소 gnb-inner에 line-hight:60px가 상속이되어서 40px으로  줄여줌 */
+    line-height: 40px;
+    margin-top: 60px;
+  }
+  .menu a {
+    display: block;
+    text-align: right;
+    padding-right: 20px;
+    color: black;
+    font-size: 20px;
+  }
+
+  /* trigger */
+  .trigger {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: block;
+    width: 24px;
+    height: 14px;
+  }
+  .trigger span {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    transition: 0.5s;
+  }
+  .trigger span:nth-child(1) {
+    top: 0;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+    width: 80%;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .trigger.active span:nth-child(2) {
+    top: 50%;
+    width: 80%;
+    opacity: 0;
+  }
+  .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  /* PC home menu */
+  .home-menu {
+    display: none;
+  }
+  /* Gototop */
+  .gototop {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .gototop.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  /* recruit button */
+  .btn-recruit {
+    position: fixed;
+    right: 4px;
+    bottom: 3px;
+    transform: scale(0.8);
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 5px 5px 20px rgb(0 0 0 / 30%);
+    transition: 0.5s;
+  }
+  .cd-vertical-nav {
+    display: none;
+  }
+
+  /* Show Hide Section */
+  #home,
+  #company,
+  #vision,
+  #project,
+  #plan,
+  #recruit {
+    /* display: none; */
+  }
+  /* ################### Section : home ################### */
+  .home-inner {
+    height: 100vh;
+  }
+  .welcome-text {
+    width: 100%;
+    transform: translate(-50%, -50%) scale(0.6);
+    letter-spacing: -3px;
+  }
+  .welcome-text span {
+    letter-spacing: -1px;
+  }
+  .welcome-text span img {
+    opacity: 0.5;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  .home-heading {
+    left: 20px;
+  }
+  .home-heading span {
+    font-size: 50px;
+  }
+
+  /* ################### Section : company ################### */
+  .company-inner {
+    height: auto;
+    background: #0d0f11;
+    padding: 80px 20px;
+  }
+  .company-items {
+    position: static;
+    width: 100%;
+    margin-left: 0;
+    transform: none;
+    text-align: center;
+  }
+  .company-items h2 {
+    font-size: 18px;
+  }
+  .company-items br {
+    display: none;
+  }
+  .company-items p {
+    color: rgb(139, 139, 139);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5em;
+    margin-top: 50px;
+  }
+  .company-items span {
+    margin-top: 0px;
+  }
+  .company-items span:hover {
+    letter-spacing: 2px;
+  }
+  .item img {
+    float: none;
+  }
+  /* ################### Section : vision ################### */
+  .vision-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 70%;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .vision-content h1 {
+    color: #a1201d;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .vision-content .ko {
+    font-size: 14px;
+  }
+  .vision-content .en {
+    display: none;
+  }
+  .vision-content span {
+    align-self: flex-start;
+    padding-right: 0;
+  }
+
+  /* ################### Section : project ################### */
+  .project-inner {
+    height: auto;
+    border: none;
+    padding-top: 60px;
+  }
+  .tab > div {
+    float: none;
+    width: 100%;
+  }
+  .project-info {
+    padding: 20px;
+  }
+  .plan-heading {
+    padding-top: 60px;
+  }
+  .project-info ul {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .project-info p {
+    position: relative;
+    font-size: 14px;
+  }
+  .view-project {
+    width: 100%;
+  }
+  .detail div {
+    font-size: 13px;
+  }
+  .detail div span {
+    font-size: 30px;
+  }
+  .detail {
+    margin-bottom: 32px;
+  }
+  .btn {
+    width: 100%;
+    bottom: 0px;
+  }
+  /* ################### Section : plan ################### */
+  .plan-inner {
+    height: auto;
+    padding: 20px;
+  }
+  .plan-feature {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+  .plan-feature > div {
+    height: auto;
+  }
+  .plan-info > div {
+    float: none;
+    width: 100%;
+  }
+  .plan-info {
+    margin-bottom: 20px;
+  }
+  .plan-heading {
+    padding-top: 30px;
+    padding-right: 0;
+  }
+  .plan-phto img {
+    width: 100%;
+    height: auto;
+  }
+  /* slick.js custom : plan */
+  #plan .slick-list {
+    padding-right: 10%;
+  }
+
+  .feature {
+    /* style.css에서 position이absolute여서 static할수없다 그러면 뒤로 빠지기 때문에 relative를 주고 top,left를 0값을주면됨  */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: none;
+    padding-top: 50px;
+  }
+  .feature > div {
+    float: none;
+    width: 100%;
+    padding: 20px;
+  }
+  .history-slider div p {
+    font-size: 13px;
+    line-height: 1.6em;
+    letter-spacing: -0.2px;
+  }
+  /* ################### Section : Recruit, footer ################### */
+  .recruit-feature {
+    padding: 0 20px;
+  }
+  .recruit-inner .inner-header {
+    font-size: 18px;
+    font-weight: 5600;
+    margin-top: 50px;
+    color: white;
+  }
+  .recruit-inner .inner-header .under-line {
+    margin-top: 10px;
+  }
+  .recruit-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+  }
+  .recruit-content h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6em;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+  }
+  .recruit-content i {
+    font-size: 40px;
+    margin-left: 0;
+  }
+  .recruit-feature p {
+    line-height: 1.8em;
+    font-size: 14px;
+    letter-spacing: -1px;
+    margin-top: 50px;
+    text-align: center;
+  }
+  .recruit-feature p br {
+    display: none;
+  }
+  /* footer */
+
+  .footer {
+    padding: 10px;
+  }
+  .footer ul li:nth-child(1) {
+    font-size: 12px;
+  }
+  .footer-top__content div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .footer-top__content div a {
+    margin-left: 0;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .footer-bottom {
+    display: block;
+  }
+  .footer-bottom p {
+    font-size: 12px;
+  }
+
+  /* ################### Sub Page Modal : recruit ################### */
+  .recruit-main {
+    height: 300px;
+  }
+  .recruit-heading {
+    width: 100%;
+    top: 65%;
+  }
+  .recruit-heading h1 {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+  .recruit-info {
+    padding: 20px;
+  }
+  .recruit-info > div {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+  .center-child {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+  .center-child h2 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -1px;
+  }
+  .center-child p {
+    font-size: 14px;
+  }
+  .recruit-slogan {
+    padding: 50px 0;
+    font-size: 22px;
+  }
+  .recruit-slogan p {
+    width: 80%;
+    font-size: 16px;
+    opacity: 0.8;
+  }
+  .recruit-slogan p:before {
+    font-size: 140px;
+    top: -10px;
+    left: -15px;
+  }
+  .recruit-contact {
+    margin-top: 50px;
+  }
+  .recruit-contact ul {
+    display: block;
+    width: 100%;
+  }
+  /* Featherlight Mobile CSS */
+  .featherlight .featherlight-close-icon {
+    font-size: 24px;
+    right: 22px;
+    top: 40px;
+    color: grey;
+  }
+  /* ###################SubPageModal: Project01~03 ################### */
+  .recruit-main.project-main1,
+  .recruit-main.project-main2,
+  .recruit-main.project-main3 {
+    height: 70vh;
+  }
+  .project-detail .recruit-heading span {
+    font-size: 16px;
+  }
+  .recruit-main.project-main1 .recruit-heading h1,
+  .recruit-main.project-main2 .recruit-heading h1,
+  .recruit-main.project-main3 .recruit-heading h1 {
+    font-size: 35px;
+    font-weight: 400;
+  }
+  .photo.project-info {
+    font-size: 15px;
+  }
+  .project-detail .recruit-slogan p:before {
+    top: -100px;
+    left: 15px;
+  }
+  .project-detail .recruit-slogan p {
+    width: 100%;
+    font-size: 22px;
+  }
+  .project-detail .recruit-slogan {
+    padding: 95px 0;
+    width: 100%;
+    padding: 60px 20px;
+  }
+}

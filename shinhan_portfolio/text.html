@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+        /* 움직이는 텍스트 */
+        .animated-title {
+            right: 50px;
+            font-size:60px; 
+            font-family:'Raleway',Sans-serif; 
+            font-weight:300; position: relative; 
+            width: 100%;
+            max-width:100%; 
+            height: auto; 
+            padding:100px 0; 
+            overflow-x: hidden; 
+            overflow-y: hidden; 
+            rotate: 90deg;
+         
+        }
+        .animated-title .track {
+            position: absolute; 
+            white-space: nowrap;
+            will-change: transform;
+            animation: marquee 60s linear infinite; 
+        }
+
+      p{
+        rotate: 90deg;
+      }
+        @keyframes marquee {
+          from {
+             transform: translateX(0); 
+            }
+          to { 
+            transform: translateX(-50%); 
+        }
+        }
+        @media (hover: hover) and (min-width: 700px){
+
+        .animated-title .content {
+            -webkit-transform: translateY(calc(100% - 8rem)); transform: translateY(calc(100% - 8rem));
+        }
+            }
+        </style>
+        
+</head>
+<body>
+    <div class="animated-title">
+        <div class="track">
+          <div class="content">&nbsp;moho design template glad&nbsp;moho design template glad&nbsp;moho design template glad&nbsp;moho design template glad&nbsp;moho design template glad&nbsp;moho design template glad</div>
+        </div>
+      </div>
+
+      <p>
+        <MARQUEE  hspace="100" vspace="100" direction="right" scrollamount="2">
+        shinhan ds</MARQUEE>
+        <!-- 스크롤 방향 설정, 속도 -->
+        </p>
+</body>
+</html>

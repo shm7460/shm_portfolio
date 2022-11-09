@@ -1,0 +1,1049 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Manrope:300,400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+/* FontAwesome CDN 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* reset css */
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+/* Default css */
+
+body {
+  font-family: "Montserrat", "sans-serif";
+  color: #222;
+  font-size: 15px;
+  margin: 0;
+  height: 100vh;
+  background-color: white;
+}
+
+/* Entire Layout 전체 레이아웃*/
+.cd-section {
+  height: 100vh;
+}
+/* > = cd-section 바로 밑에 div */
+.cd-section > div {
+  position: relative;
+  height: 100%;
+}
+.content {
+  /* position으로 가면 inline-block으로변경되서 너비값을 줘야함 */
+  position: absolute;
+  width: calc(100% - 40px);
+  height: calc(100% - 80px);
+  left: 20px;
+  bottom: 20px;
+  /* background-color: #ddd; */
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.gnb-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: calc(100% - 40px);
+  margin: auto;
+  height: 60px;
+  background-color: white;
+}
+
+.logo {
+  margin-top: 10px;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  font-family: "Lexend Giga", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #a1201d;
+  margin-left: 5px;
+  padding-top: 2px;
+}
+.logo img {
+  transform: scale(0.8);
+  margin-right: 5px;
+}
+.gnb {
+  float: right;
+}
+.menu {
+  display: none;
+}
+.home-menu {
+  display: flex;
+}
+.home-menu a {
+  position: relative;
+  font-size: 16px;
+  margin-left: 35px;
+  font-weight: 400;
+  color: darkgray;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  transition: 0.5s;
+}
+.home-menu a:before {
+  position: absolute;
+  content: "";
+  background-color: #d33330;
+  height: 2px;
+  width: 0px;
+  bottom: -2px;
+  transition: 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home-menu a:hover:before {
+  width: 100%;
+}
+.home-menu a:hover {
+  color: black;
+  letter-spacing: 2px;
+}
+.triggerr {
+  display: none;
+}
+
+/* recruit button */
+.btn-recruit {
+  position: fixed;
+  right: 60px;
+  bottom: 33px;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 5px 5px 20px rgb(0 0 0 / 30%);
+  transition: 0.5s;
+}
+.btn-recruit i {
+  transform: rotateY(180deg);
+  margin-right: 5px;
+}
+.btn-recruit:active {
+  transform: scale(0);
+}
+/* ################### Section : home ################### */
+.home-inner {
+  background-color: white;
+  height: 100%;
+}
+.home-inner:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  animation: overlay 1s 2s ease-in-out both;
+}
+.welcome-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  letter-spacing: 12px;
+  line-height: 1.4em;
+  color: darkgrey;
+  /* 애니메이션이름 지속시간 부드러움정도 */
+  animation: slideup 2s linear;
+  /* 100%구간에서 애니메이션을 끝냄 */
+  animation-fill-mode: both;
+}
+.welcome-text span {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  letter-spacing: 5px;
+  font-weight: 300;
+}
+.welcome-text span img {
+  opacity: 0.8;
+  margin-left: 5px;
+}
+.opacity-image {
+  background: url(images/section-bg-01.png) no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  opacity: 0;
+  /* 애니메이션이름 지속시간 지연시간 부드러움 100%에서 끝냄 */
+  animation: opacity-image 1s 2.5s ease-in both;
+}
+.home-heading {
+  position: absolute;
+  top: 50%;
+  left: 250px;
+  transform: translatey(-50%);
+}
+.home-heading span {
+  display: block;
+  font-size: 115px;
+  color: white;
+  font-weight: 600;
+  width: 0;
+  overflow: hidden;
+  animation: reveal 1s 3s ease-in-out both;
+}
+.home-heading span:nth-child(1) {
+  animation-delay: 3s;
+}
+.home-heading span:nth-child(2) {
+  animation-delay: 3.2s;
+}
+.home-heading span:nth-child(3) {
+  animation-delay: 3.4s;
+}
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  25% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  50% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes overlay {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes opacity-image {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes reveal {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* ################### Section : company ################### */
+.company-inner {
+  background: url(images/company-main.png) no-repeat center;
+  background-size: cover;
+  height: 100%;
+}
+.company-inner:before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: inherit;
+}
+.company-items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.company-items .inner-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 26px;
+  font-weight: 500;
+}
+.company-items .inner-header .under-line {
+  width: 60px;
+  height: 1px;
+  background-color: #b82a27;
+  margin-top: 15px;
+}
+.company-items h2 {
+  font-size: 50px;
+  font-weight: 200;
+  text-align: center;
+  line-height: 1.6em;
+  color: white;
+  margin-top: 100px;
+  letter-spacing: 2px;
+}
+.company-items p {
+  color: rgb(139, 139, 139);
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-top: 50px;
+}
+.company-items span {
+  color: rgb(139, 139, 139);
+  margin-top: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.company-items span:hover {
+  color: white;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+.company-items span i {
+  margin-left: 15px;
+}
+
+/* ################### Section : vision ################### */
+
+.vision-inner {
+  height: 100%;
+  background-color: white;
+}
+.banner {
+  background: url(images/banner-01.jpg) no-repeat center;
+  background-size: cover;
+  height: 30%;
+}
+.vision-content {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.vision-content h1 {
+  color: #a1201d;
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+.vision-content .ko,
+.vision-content .en {
+  width: 90%;
+  line-height: 1.6em;
+  font-size: 16px;
+  margin: 0;
+}
+.vision-content .en {
+  font-size: 14px;
+  color: rgb(66, 66, 66);
+  margin-top: 30px;
+}
+.vision-content span {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  padding-right: 80px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.vision-content span b {
+  letter-spacing: 10px;
+  margin-left: 10px;
+}
+.vision-content span img {
+  transform: scale(0.8);
+  padding-bottom: 10px;
+}
+
+/* ################### Section : project ################### */
+.project-inner {
+  height: 100%;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid #ddd;
+}
+.tabs {
+  height: 100%;
+  width: 600%;
+  transition: 0.5s;
+}
+.tab {
+  float: left;
+  width: 16.66666666666667%;
+  height: 100%;
+}
+.tab > div {
+  float: left;
+  height: 100%;
+}
+.project-photo {
+  width: 75%;
+  overflow: hidden;
+}
+input[name="tabmenu"] {
+  display: none;
+}
+.btn {
+  position: absolute;
+  width: 25%;
+  left: 0;
+  bottom: 30px;
+  text-align: center;
+}
+.btn label {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+  display: inline-block;
+  cursor: pointer;
+  margin: 8px;
+}
+/* 버튼라벨의 아웃라인 디자인 */
+.btn label:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  top: -6px;
+  left: -6px;
+  transition: 0.3s;
+}
+.btn label:hover:before {
+  border: 1px solid #aaa;
+}
+/* 체크했을때 버튼아웃라인 변경됨 */
+input[id="tab1"]:checked ~ .btn label[for="tab1"]:before,
+input[id="tab2"]:checked ~ .btn label[for="tab2"]:before,
+input[id="tab3"]:checked ~ .btn label[for="tab3"]:before,
+input[id="tab4"]:checked ~ .btn label[for="tab4"]:before,
+input[id="tab5"]:checked ~ .btn label[for="tab5"]:before,
+input[id="tab6"]:checked ~ .btn label[for="tab6"]:before {
+  border: 1px solid #aaa;
+}
+/* 버튼 체크디자인 */
+input[id="tab1"]:checked ~ .btn label[for="tab1"],
+input[id="tab2"]:checked ~ .btn label[for="tab2"],
+input[id="tab3"]:checked ~ .btn label[for="tab3"],
+input[id="tab4"]:checked ~ .btn label[for="tab4"],
+input[id="tab5"]:checked ~ .btn label[for="tab5"],
+input[id="tab6"]:checked ~ .btn label[for="tab6"] {
+  color: red;
+}
+/* 버튼 클릭하면 화면바뀜 */
+input[id="tab1"]:checked ~ .tabs {
+  margin-left: 0;
+}
+/* - 마이너스이면 왼쪽으로 움직임 */
+input[id="tab2"]:checked ~ .tabs {
+  margin-left: -100%;
+}
+input[id="tab3"]:checked ~ .tabs {
+  margin-left: -200%;
+}
+input[id="tab4"]:checked ~ .tabs {
+  margin-left: -300%;
+}
+input[id="tab5"]:checked ~ .tabs {
+  margin-left: -400%;
+}
+input[id="tab6"]:checked ~ .tabs {
+  margin-left: -500%;
+}
+/* project info */
+.project-info {
+  position: relative;
+  width: 25%;
+  padding: 50px;
+}
+.project-info:before {
+  /* 현재클래스의 데이터 속성을 가져옴 */
+  content: attr(date-text);
+  position: absolute;
+  font-size: 130px;
+  color: #eee;
+  top: -10px;
+  left: 10px;
+  font-weight: bold;
+}
+.project-info h3 {
+  position: relative;
+  font-size: 20px;
+  font-size: 16px;
+  color: gray;
+  font-weight: normal;
+}
+
+.project-info h3 b {
+  font-size: 26px;
+  color: black;
+  margin-right: 5px;
+}
+.project-info p {
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-top: 25px;
+}
+.project-info ul {
+  line-height: 2em;
+  margin: 50px 0;
+}
+.project-info ul li:before {
+  content: "\f105";
+  font-family: fontawesome;
+  margin-right: 10px;
+}
+.detail {
+  margin-bottom: 100px;
+}
+.detail div {
+  display: inline-block;
+  text-align: center;
+  width: 32.5%;
+  color: #999;
+}
+.detail div span {
+  display: block;
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+.view-project {
+  display: inline-block;
+  width: 250px;
+  padding: 10px;
+  background-color: #3f3f3f;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+
+  transition: 0.5s;
+}
+.view-project:hover {
+  background-color: black;
+}
+.view-project i {
+  margin-left: 10px;
+  transition: 0.5s;
+}
+.view-project:hover i {
+  margin-left: 30px;
+}
+
+/* ################### Section : plan ################### */
+.plan-inner {
+  background-color: #040406e5;
+  height: 100%;
+}
+.plan-inner .under-line {
+  width: 60px;
+  height: 1px;
+  background-color: rgb(54, 248, 183);
+  margin-top: 15px;
+}
+.plan-feature {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+.plan-feature > div {
+  height: 300px;
+  color: #bbb;
+}
+.plan-info > div {
+  float: left;
+}
+.plan-heading {
+  width: 70%;
+  padding-right: 50px;
+}
+.plan-heading h2,
+.history-info h2 {
+  color: white;
+  margin: 0;
+  font-weight: 500;
+}
+.plan-heading p {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+.plan-phto {
+  width: 30%;
+}
+.plan-phto img {
+  height: 265px;
+}
+.plan-heading hr.bar,
+.history-info hr.bar {
+  display: inline-block;
+  width: 50px;
+  margin-top: 20px;
+  background-color: rgb(54, 248, 183);
+}
+.history-slider div h4 {
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.5em;
+}
+.history-slider div h4 span {
+  color: rgb(54, 248, 183);
+}
+
+.history-slider div p {
+  font-size: 15px;
+  line-height: 1.6em;
+  letter-spacing: 1px;
+}
+/* Slick.js Custom CSS */
+.history-slider .slick-arrow {
+  display: none !important;
+}
+.history-slider .slick-dots li button:before {
+  color: white;
+  font-size: 40px;
+}
+.history-slider .slick-dots li {
+  margin: 0;
+}
+.history-slider .slick-slide {
+  padding-right: 20px;
+  margin-top: 20px;
+}
+
+/* ################### Section : Recruit, footer ################### */
+.recruit-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.recruit-feature {
+  height: 75%;
+  padding: 100px;
+  background-color: #191919;
+}
+.recruit-inner .inner-header {
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+}
+.recruit-inner .inner-header .under-line {
+  width: 30px;
+  height: 1px;
+  background-color: rgb(172, 172, 172);
+  margin-top: 15px;
+}
+.recruit-content {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 50px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+.recruit-content:hover {
+  letter-spacing: 1px;
+  opacity: 1;
+}
+.recruit-content:hover i {
+  color: #a1201d;
+}
+.recruit-content h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 1.4em;
+  margin: 0;
+}
+.recruit-content i {
+  font-size: 45px;
+  color: white;
+  margin-left: 60px;
+  transition: 0.5s;
+}
+.recruit-feature p {
+  color: #bbb;
+  margin-top: 100px;
+  line-height: 1.6em;
+  font-size: 16px;
+}
+/* footer */
+.footer {
+  height: 25%;
+  background-color: #272727;
+  padding: 20px 40px;
+}
+.footer-top h1 img {
+  transform: scale(0.7);
+  margin-right: 5px;
+}
+.footer-top h1 {
+  display: flex;
+  align-items: center;
+  font-family: "Lexend Giga", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #881615;
+  padding-top: 2px;
+  margin: 0;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.footer-top__content {
+  display: flex;
+  justify-content: space-between;
+  color: #999;
+  font-size: 14px;
+}
+.footer-top__content ul {
+  margin: 0;
+  line-height: 1.5em;
+}
+.footer ul li {
+  font-size: 14px;
+}
+.footer-top__content div a {
+  color: inherit;
+  margin-left: 100px;
+  transition: 0.3s;
+}
+.footer-top__content div a:hover {
+  color: white;
+}
+.footer .under-line {
+  width: 100%;
+  height: 1px;
+  background-color: #999;
+  margin-top: 15px;
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  color: #999;
+}
+.footer-icon i {
+  margin-left: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 18px;
+}
+.footer-icon i:hover {
+  color: white;
+}
+/* ################### Sub Page Modal :  recruit ################### */
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+}
+.header-inner {
+  width: 95%;
+  margin: auto;
+  height: 90px;
+  line-height: 90px;
+  border-bottom: 1px solid #ddd;
+}
+.modal-display {
+  font-size: 16px;
+}
+.recruit-main {
+  position: relative;
+  height: 600px;
+}
+.recruit-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.recruit-heading span {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
+.recruit-heading span:before,
+.recruit-heading span:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  background-color: black;
+  top: 50%;
+}
+.recruit-heading span:before {
+  right: 120%;
+}
+.recruit-heading span:after {
+  left: 120%;
+}
+.recruit-heading h1 {
+  font-size: 80px;
+  font-weight: 200;
+  margin: 0;
+  margin-top: 40px;
+}
+.recruit-info {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.recruit-info > div {
+  float: left;
+  width: 50%;
+  height: 600px;
+}
+.center-parent {
+  position: relative;
+}
+.center-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+.center-child h2 {
+  font-size: 34px;
+}
+
+.center-child p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+.photo img {
+  width: 100%;
+}
+.recruit-slogan {
+  padding: 100px 0;
+}
+.recruit-slogan p {
+  position: relative;
+  font-size: 26px;
+  font-weight: 200;
+  line-height: 1.8em;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+.recruit-slogan p:before {
+  content: ",,";
+  position: absolute;
+  font-family: "Secular One", sans-serif;
+  font-size: 180px;
+  color: #eee;
+  transform: rotate(180deg);
+  top: 31px;
+  left: -134px;
+}
+.recruit-contact ul {
+  display: inline-block;
+  width: 49%;
+  font-size: 20px;
+  font-weight: 300;
+}
+.recruit-contact ul li {
+  margin-bottom: 10px;
+}
+.recruit-contact ul li:first-child {
+  font-weight: 400;
+}
+.recruit-contact ul li:last-child {
+  color: dodgerblue;
+}
+.sns a {
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+  color: black;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  margin: 2px;
+  transition: 0.3s;
+}
+.sns a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: 0.3s;
+}
+.sns a:hover {
+  color: white;
+}
+.sns a:hover::before {
+  transform: translateX(-50%) scale(1);
+}
+.sns a:nth-child(1):before {
+  background-color: #1877f2;
+}
+.sns a:nth-child(2):before {
+  background-color: #1da1f2;
+}
+.sns a:nth-child(3):before {
+  background-color: #0a66c2;
+}
+.sns a:nth-child(4):before {
+  background-color: #e4405f;
+}
+.sns a:nth-child(5):before {
+  background-color: #cd201f;
+}
+.sns a:nth-child(6):before {
+  background-color: #09b83e;
+}
+/* ################### Sub Page Modal : Project01~03 ################### */
+.recruit-main.project-main1 {
+  background: url("images/project-main-01-01.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+.recruit-main.project-main2 {
+  background: url("images/project-main-01-02.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+.recruit-main.project-main3 {
+  background: url("images/project-main-01-03.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+.recruit-main.project-main1 .recruit-heading,
+.recruit-main.project-main2 .recruit-heading,
+.recruit-main.project-main3 .recruit-heading {
+  color: white;
+  width: 100%;
+  animation: slidedown 0.8s linear both;
+}
+.recruit-main.project-main1 .recruit-heading h1,
+.recruit-main.project-main2 .recruit-heading h1,
+.recruit-main.project-main3 .recruit-heading h1 {
+  font-size: 70px;
+}
+.project-detail .recruit-info {
+  margin-bottom: 0;
+}
+.project-detail .recruit-slogan p:before {
+  top: -85px;
+  left: -130px;
+}
+.photo.project-info {
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 120px;
+}
+.project-detail .recruit-heading span:before,
+.project-detail .recruit-heading span:after {
+  background-color: white;
+}
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+/* Feather light Custom CSS */
+.featherlight .featherlight-content {
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
+  overflow: auto;
+  margin-left: 0;
+  margin-right: 0;
+  max-height: 100%;
+  background: #fff;
+  cursor: auto;
+  white-space: normal;
+  width: 100%;
+  height: 100%;
+}
+.featherlight .featherlight-inner {
+  display: block;
+}
+.featherlight iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.featherlight .featherlight-close-icon {
+  position: absolute;
+  z-index: 9999;
+  top: 30px;
+  right: 80px;
+  line-height: 25px;
+  width: 25px;
+  cursor: pointer;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+  border: none;
+  padding: 0;
+  font-size: 40px;
+}
