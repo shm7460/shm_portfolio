@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Original Surfer", cursive;
+}
+h1 {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  font-size: 3em;
+  text-shadow: 2px 3px 2px #3d3732;
+  z-index: 1;
+  color: white;
+  margin: 0;
+}
+.navi {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+.navi li {
+  margin-bottom: 30px;
+}
+.navi li a {
+  position: relative;
+  color: #2e2925;
+  text-decoration: none;
+  font-size: 7em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.navi li a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  width: 0;
+  overflow: hidden;
+  content: attr(data-text);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.navi li a:hover:before {
+  width: 100%;
+}
+.photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(images/portrait-initial.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: 0.5s;
+}
+.box {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 40px;
+  height: 40px;
+  background-color: #2e2925;
+  box-shadow: 5px 3px 2px white;
+  border-radius: 3px;
+}
+
+@media (max-width: 860px) {
+  .navi li a {
+    font-size: 60px;
+  }
+}

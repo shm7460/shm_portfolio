@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="mouse.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>:MINSHOP</h1>
+      <ul class="navi">
+        <li data-image="images/portrait-01.jpg">
+          <a href="#" data-text="Top">Top</a>
+        </li>
+        <li data-image="images/portrait-02.jpg">
+          <a href="#" data-text="Pant">Pant</a>
+        </li>
+        <li data-image="images/portrait-03.jpg">
+          <a href="#" data-text="Onepiece">Onepiece</a>
+        </li>
+        <li data-image="images/portrait-04.jpg">
+          <a href="#" data-text="Accessories">Accessories</a>
+        </li>
+      </ul>
+      <div class="photo"></div>
+      <div class="box"></div>
+    </div>
+
+    <script>
+      $(".navi li").mouseenter(function () {
+        // data-image는 속성이기때문에 ""해줘야함
+        const changeImage = $(this).attr("data-image");
+        $(".photo").css({
+          // 배경이미지를 css로 변경할때
+          "background-image": "url(" + changeImage + ")",
+        });
+      });
+
+      $(".navi li").mouseleave(function () {
+        $(".photo").css({
+          "background-image": "",
+        });
+      });
+    </script>
+  </body>
+</html>
