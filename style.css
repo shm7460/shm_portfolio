@@ -749,11 +749,11 @@ p {
     bottom: 16px;
   }
 }
-/* Sub :  other works  */
+
+/* report :  works  */
 .other-modal {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 /* Feather light Custom CSS */
