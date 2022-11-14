@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsible.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="video-frame">
+        <video
+          src="images/video-sky.mp4"
+          autoplay
+          muted
+          loop
+          poster="images/placeholder-female.jpg"
+        ></video>
+      </div>
+      <div class="logo">
+        <img src="images/logo.png" alt="" />
+      </div>
+      <div class="content">
+        <div class="heading">
+          <h1><span>CVB</span>Best Bleisure City Busan</h1>
+          <p>
+            부산역에서 출발해 UN기념공원을 거쳐 광안리, 그리고 쇼핑과 볼거리가
+            가득한 마린시티와 해운대, 센텀시티를 비롯한 총 15개 정류장을
+            다닙니다. 블루라인은 해운대해수욕장을 시작으로 달맞이길, 청사포,
+            송정해수욕장 등 자연과 만날 수 있는 구간을 운행합니다. 그린라인은
+            부산역을 출발해 용두산공원, 오륙도 스카이워크 등 태종대 방면으로
+            14개 정류장을 오고 갑니다
+          </p>
+          <a class="btn-book" href="#">Book Now</a>
+          <a class="btn-learn" href="#">More view</a>
+        </div>
+        <div class="anniversary">
+          <em>부산컨벤션뷰로</em>
+          <span>BTO</span>
+        </div>
+      </div>
+      <div class="trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="modal-gnb">
+        <div class="gnb">
+          <a href="#">WHY 부산</a>
+          <a href="#">MICE 지원</a>
+          <a href="#">MICE 네트워크</a>
+          <a href="#">MICE 인프라</a>
+          <a href="#">컨벤션뷰로</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Trigger
+      $(".trigger").click(function () {
+        $(this).toggleClass("active");
+        $(".modal-gnb").fadeToggle();
+      });
+      //   Audio Controls
+      const bgm = document.getElementById("myAudio");
+      bgm.volume = 0.2; //Audio Volume : 0~1 사이에 해주면됨
+    </script>
+  </body>
+</html>

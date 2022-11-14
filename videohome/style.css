@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@400;500&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  color: white;
+  height: 100vh;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+/* BG Video */
+.video-frame:before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(-135deg, rgb(117, 198, 252), transparent);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.video-frame video {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+/* logo */
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+/* Heading */
+.heading {
+  position: absolute;
+  width: 900px;
+  left: 100px;
+  bottom: 100px;
+  animation: showing1 2s linear;
+  /* 애니메이션 효과가 0에서 100으로 했으면 다시 0으로 스탠 바이 하지마라라는 뜻 */
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+.heading h1 {
+  margin: 0;
+  font-size: 70px;
+  color: rgb(199, 199, 199);
+}
+.heading h1 span {
+  display: block;
+  color: #0050a0;
+  font-size: 85px;
+  font-family: "Raleway", sans-serif;
+}
+.heading p {
+  line-height: 1.6em;
+  color: rgb(206, 206, 206);
+  font-size: 24px;
+}
+.btn-book,
+.btn-learn {
+  background-color: #0050a0;
+  color: white;
+  text-transform: uppercase;
+  width: 150px;
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-right: 5px;
+  /* 한쪽에만 보더를 주면 크기차이가 나서 둘다 보더를 준다 */
+  border: 1px solid #0050a0;
+  transition: 0.3s;
+}
+
+.btn-learn {
+  background-color: transparent;
+  color: white;
+}
+.btn-book:hover,
+.btn-learn:hover {
+  background-color: black;
+  color: white;
+  border-color: transparent;
+}
+
+/* anniversary */
+.anniversary {
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+  color: rgba(68, 68, 68, 0.3);
+  text-align: center;
+  align-items: center;
+  animation: showing2 2s linear;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+.anniversary em {
+  display: block;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 1.3em;
+  margin-bottom: -20px;
+  margin-left: 18px;
+  font-weight: bold;
+}
+
+.anniversary span {
+  font-family: "Lexend Peta", sans-serif;
+  font-size: 120px;
+}
+@keyframes showing1 {
+  0% {
+    opacity: 0;
+    margin-left: -100px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+@keyframes showing2 {
+  0% {
+    opacity: 0;
+    margin-right: -100px;
+  }
+  100% {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+
+/* Trigger */
+.trigger {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+.trigger span {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+.trigger span:nth-child(1) {
+  top: 0;
+}
+.trigger span:nth-child(2) {
+  top: 50%;
+  width: 80%;
+}
+.trigger span:nth-child(3) {
+  top: 100%;
+}
+.trigger.active span {
+  background-color: white;
+}
+.trigger.active span:nth-child(1) {
+  /* top:50%을 한 이유는 중심으로 내려와서 45도로 돌아야지 중심에서 x자가 완성되기 때문 */
+  top: 50%;
+  transform: rotate(45deg);
+}
+.trigger.active span:nth-child(2) {
+  opacity: 0;
+}
+.trigger.active span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+/* Modal GNB */
+.modal-gnb {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+.gnb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gnb a {
+  display: block;
+  padding: 10px;
+  color: white;
+  font-size: 60px;
+  font-family: "Raleway", sans-serif;
+  transition: 0.3s;
+  animation: gnb 0.5s linear;
+  /* 최초에는 안보이는 상태야 된다 */
+  opacity: 0;
+  /* 다시 애니메이션 효과가 0%으롣 돌아가지 않게 해줌 */
+  animation-fill-mode: both;
+}
+.gnb a:hover {
+  color: #0050a0;
+}
+.gnb a:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.gnb a:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.gnb a:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.gnb a:nth-child(4) {
+  animation-delay: 1.1s;
+}
+.gnb a:nth-child(5) {
+  animation-delay: 1.3s;
+}
+@keyframes gnb {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
