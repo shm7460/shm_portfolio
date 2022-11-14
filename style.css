@@ -431,6 +431,10 @@ p {
   margin-bottom: 20px;
   font-size: 26px;
 }
+.project__description h3.center {
+  text-align: center;
+  margin-bottom: 50px;
+}
 .project__description p {
   color: white;
   font-size: 18px;
