@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <article>
+        <div class="heading">
+          <h1>고객센터 QnA</h1>
+        </div>
+        <div class="content">
+          <div class="accordion">
+            <div class="title" data-image="images/app-capture-01.png">
+              <p>본인 인증을 위해 신분증 제출하라는데 어떻게 하나요?</p>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="desc">
+              안전한 본인 인증 절차를 위해, 사용자분이 직접 신분증을 들고 양식에
+              맞춰 촬영한 사진을 고객센터로 보내 주세요.
+              <br />
+              앱 : '전체' → '고객센터' → '채팅 상담' → '사용 문의' <br />
+              카카오톡(@Absd): 검색 → 채팅방 연결 → '상담원 연결'
+            </div>
+            <div class="title" data-image="images/app-capture-02.png">
+              <p>거래 내역이나 계좌 잔액이 물음표로 나오면 어떻게 하나요?</p>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="desc">
+              이는 금융사에서 제공하는 정보를 한 곳에서 통합 관리/분석할 수 있는
+              ‘마이데이터’를 통한 연결 과정이며,신용정보법 개정안을 비롯한
+              <br />
+              데이터 3법 시행으로 인해 이전에 제공하던 계좌-카드 연결 방식으로는
+              금융 정보 제공이 어렵게 되어 <br />
+              지금은 ‘마이데이터’를 통해 자산조회 서비스를 지원하고 있어요.
+            </div>
+            <div class="title" data-image="images/app-capture-03.png">
+              <p>고객요청서 어떻게 다운로드 받나요?</p>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="desc">
+              고객요청서는 계정 잠금/계정 잠금 해제, 머니 반환 등 다양한 업무
+              처리에 쓰는 서류에요. <br />
+              고객요청서(일반용) PDF 다운로드.pdf <br />
+              고객요청서에 인감 또는 서명을 하는 경우 제출 서류를 일치시켜서
+              보내주세요. <br />
+              - 인감날인 시, 인감증명서 필수 <br />
+              - 서명 날인 시, 본인서명사실확인서 필수
+            </div>
+            <div class="title" data-image="images/app-capture-04.png">
+              <p>앱에 계좌나 카드를 어떻게 연결하나요?</p>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="desc">
+              마이데이터를 이용한 자산 연결 방법을 알려드릴게요. <br />
+
+              자산을 연결하기 위해서는 인증서를 발급하거나, 사용하던
+              공동인증서를 앱에 저장해 주세요. <br />
+
+              [ 공동인증서 불러오기 ]
+            </div>
+          </div>
+          <div class="image">
+            <img src="images/app-capture-01.png" alt="" />
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <script>
+      $(".title").click(function () {
+        $(this).toggleClass("active");
+        $(this).siblings(".title").removeClass("active");
+        // .stop()는 애니메이션 동작을 끊어줘서 여러번 반복안하게 해줌
+        $(this).siblings(".desc").stop().slideUp();
+        // .next는 바로옆에 아이를 선택함
+        $(this).next(".desc").stop().slideToggle();
+        const dataImage = $(this).attr("data-image");
+        $(".image img").attr("src", dataImage);
+      });
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/fed145381f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

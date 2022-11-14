@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "EliceDigitalBaeum-Bd";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-weight: 300;
+  background-color: rgb(252, 252, 252);
+}
+
+/* Layout */
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+}
+section article {
+  width: 75%;
+  align-items: center;
+}
+.heading {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  padding-bottom: 15px;
+  text-align: center;
+}
+.heading h1 {
+  color: rgb(15, 13, 2);
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-family: "EliceDigitalBaeum-Bd";
+  margin: 0;
+}
+.desc {
+  line-height: 1.8em;
+  font-size: 16px;
+  color: rgb(71, 71, 71);
+}
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "IBMPlexSansKR-Regular";
+}
+/*>는 content 바로밑에 div를 선택한다  */
+.content > div {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  margin-top: 20px;
+  min-height: 520px;
+}
+.accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid rgba(221, 221, 221, 0.7);
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0 15px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.title:hover,
+.title.active {
+  background-color: rgb(43, 41, 58);
+  color: gold;
+}
+.title i {
+  transition: 0.3s;
+}
+.title.active i {
+  transform: rotate(90deg);
+  color: gold;
+}
+.desc {
+  padding: 15px;
+  display: none;
+}
+.desc.active {
+  display: block;
+}
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}

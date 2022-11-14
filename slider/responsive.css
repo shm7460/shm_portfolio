@@ -1,0 +1,36 @@
+@media (max-width: 950px) {
+  section {
+    display: block;
+    height: auto;
+    padding: 10px 5px;
+  }
+  section article {
+    width: 100%;
+  }
+  .heading h1 {
+    font-size: 24px;
+  }
+  .desc {
+    font-size: 16px;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .content > div {
+    width: 100%;
+    float: none;
+    min-height: 300px;
+  }
+  .title {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  .image {
+    order: -1;
+    justify-content: center;
+  }
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+}
