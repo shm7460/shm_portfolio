@@ -472,7 +472,7 @@ p {
   background-color: var(--color-black);
 }
 .other-title {
-  width: 40%;
+  width: 30%;
   display: flex;
   flex-direction: column;
 }
@@ -493,8 +493,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 60%;
-  height: 650px;
+  width: 70%;
 }
 .top,
 .bottom {
@@ -504,8 +503,8 @@ p {
 }
 .box {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 420px;
+  height: 400px;
   overflow: hidden;
 }
 .box:before {
@@ -513,7 +512,7 @@ p {
   content: "";
   width: inherit;
   height: inherit;
-  top: 230px;
+  top: 320px;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   transition: 0.5s;
@@ -549,15 +548,15 @@ p {
 }
 .box-inner {
   position: absolute;
-  top: 230px;
+  top: 320px;
   left: 0;
   width: inherit;
   height: inherit;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 10px;
-  color: white;
+  padding: 30px 20px;
+
   transition: 0.5s;
 }
 .box .title {
@@ -565,38 +564,51 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 .box .title i {
   transform: rotate(-45deg);
   transition: 0.5s;
+  font-size: 28px;
+  color: rgb(224, 224, 224);
 }
 .box-inner h1 {
-  font-size: 18px;
-  color: white;
+  font-size: 30px;
+  margin: 0;
+  color: rgb(224, 224, 224);
+  font-weight: 500;
 }
-.box-inner p:first-child {
+.box-inner p:first-of-type {
+  width: 100%;
   font-family: "S-CoreDream-3Light";
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.39);
 }
 .box-inner p {
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 10px;
   color: rgb(212, 212, 212);
+  line-height: 1.6em;
 }
 
 /* other works detail-btn  */
 .detail-btn {
   margin-top: 50px;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 500;
-  color: rgb(197, 197, 197);
+  color: rgba(255, 255, 255, 0.644);
   transition: 0.5s;
 }
 .detail-btn:hover {
-  color: #ffffff;
+  color: var(--color-green);
   letter-spacing: 1.2px;
 }
 .detail-btn:active {
   transform: scale(0);
+}
+.detail-btn i {
+  margin-right: 10px;
 }
 
 /* Contact */
