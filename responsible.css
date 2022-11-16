@@ -1,0 +1,237 @@
+#navbar,
+#home,
+#about,
+#skills,
+#work,
+#other {
+  /* display: none; */
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+  /* Nabar */
+  #navbar {
+    right: 0;
+  }
+  /* Home */
+  #home {
+    height: 90vh;
+  }
+  .home__container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .home__title {
+    font-size: 30px;
+  }
+  .home__contact {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  /* Mouse Wheele */
+  .mouse {
+    width: 32px;
+    height: 45px;
+  }
+  .mouse i {
+    font-size: 16px;
+  }
+
+  /* About */
+  .about__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px;
+    padding-left: 0;
+    padding: 0 15px;
+  }
+  .about-text {
+    width: 100%;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .about-text p br {
+    display: none;
+  }
+  .about-text p {
+    line-height: 1.6em;
+    font-size: 15px;
+  }
+  .about-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .about-license {
+    width: 100%;
+  }
+  .about-license .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .about-license .list {
+    font-size: 16px;
+  }
+  .about-title {
+    width: 95%;
+    display: flex;
+    align-items: center;
+  }
+  .about-title .top-border {
+    width: 100%;
+    border-top: 1px solid #292929;
+  }
+  .about-title h1 {
+    font-size: 50px;
+    color: #292929;
+    text-align: center;
+  }
+
+  /* Skills */
+  .black-box {
+    padding: 0 5%;
+  }
+  .black-box li {
+    margin: 0 20px;
+  }
+  .icon-box {
+    transform: scale(0.6);
+  }
+
+  /* Work */
+  .project {
+    width: 340px;
+    flex-grow: 1;
+    margin-bottom: 20px;
+  }
+  .work__categories {
+    display: flex;
+    margin: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+  .category__btn {
+    padding: 10px 20px;
+  }
+  .project:hover .project__description {
+    pointer-events: none;
+  }
+  .project:active .project__description {
+    opacity: 0.85;
+    transform: translateY(0px);
+  }
+  .project__description h3 {
+    font-size: 20px;
+  }
+  .project__description p {
+    font-size: 16px;
+  }
+  .btn {
+    padding: 7px 15px;
+    font-size: 16px;
+    margin: 0 10px;
+  }
+
+  /* Other Works */
+  .section__other {
+    flex-direction: column;
+    height: auto;
+  }
+  .section__other > div {
+    width: 100%;
+  }
+  .other-title h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .other-title span {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .other-contents {
+    width: 100%;
+    margin-top: 65px;
+  }
+  .top,
+  .bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .box {
+    height: 260px;
+    margin-bottom: 40px;
+    background-size: cover;
+  }
+  .box:before {
+    top: 180px;
+  }
+  .box:hover:before,
+  .box:hover .box-inner {
+    pointer-events: none;
+  }
+  .box:active:before,
+  .box:active .box-inner {
+    top: 0;
+  }
+  .box-inner {
+    top: 180px;
+  }
+  .box .title i {
+    font-size: 22px;
+  }
+  .box-inner h1 {
+    font-size: 22px;
+  }
+  .box-inner p {
+    font-size: 16px;
+  }
+  /* other works detail-btn  */
+  .section__contact {
+    padding: 10px 0;
+    margin: 0 20px;
+  }
+  #other .detail-btn {
+    font-size: 18px;
+  }
+  /* Contact */
+  .contact__title {
+    font-size: 22px;
+    padding-top: 20px;
+  }
+  .contact__email {
+    font-size: 16px;
+  }
+  .contact__links {
+    margin: 10px 0px;
+  }
+  .contact__rights {
+    color: rgb(192, 192, 192);
+    font-size: 15px;
+    text-align: center;
+  }
+  /* Arrow up  */
+  .arrow-up {
+    bottom: 25px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    background-color: rgba(19, 19, 19, 0.4);
+    z-index: 3;
+  }
+  .featherlight .featherlight-close-icon {
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+  }
+}

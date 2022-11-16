@@ -56,10 +56,21 @@ navbarMenu.addEventListener("click", (event) => {
   scrollIntoView(link);
 });
 
-//Navbar toggle button for small screen
+//  토글 버튼 클릭시 메뉴 나타내기
+const menu = document.querySelector(".navbar__meun");
 const navbarToggleBtn = document.querySelector(".navbar__toogle-btn");
 navbarToggleBtn.addEventListener("click", () => {
   navbarMenu.classList.toggle("open");
+});
+
+// 스크롤시 메뉴바 배경색 채우기
+const navbarHeight = navbarToggleBtn.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  if (window.scrollY > navbarHeight) {
+    navbarToggleBtn.classList.add("navbar--dark");
+  } else {
+    navbarToggleBtn.classList.remove("navbar--dark");
+  }
 });
 
 // Handle click on "contact me" button on home
