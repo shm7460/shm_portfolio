@@ -157,9 +157,7 @@
   .category__btn {
     padding: 10px 20px;
   }
-  .project:hover .project__description {
-    pointer-events: none;
-  }
+
   .project:active .project__description {
     opacity: 0.85;
     transform: translateY(0px);
@@ -210,10 +208,7 @@
   .box:before {
     top: 180px;
   }
-  .box:hover:before,
-  .box:hover .box-inner {
-    pointer-events: none;
-  }
+
   .box:active:before,
   .box:active .box-inner {
     top: 0;
