@@ -123,10 +123,11 @@ p {
   align-items: center;
   padding: 10px 15px;
   transition: 0.3s;
+  display: none;
 }
 
 .navbar__meun__item {
-  padding: 15% 25%;
+  padding: 15px 25px;
   margin: 5px 4px;
   cursor: pointer;
   text-align: center;
@@ -138,7 +139,7 @@ p {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .navbar__meun__item:hover {
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   border-radius: var(--size-border-radius);
 }
 .navbar__toogle-btn {
@@ -148,7 +149,7 @@ p {
   display: none;
 }
 .navbar__toogle-btn i {
-  font-size: 60px;
+  font-size: 30px;
   color: rgb(255, 255, 255);
 }
 /* Home */
