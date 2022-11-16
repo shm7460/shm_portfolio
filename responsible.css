@@ -1,10 +1,10 @@
 #navbar,
-#home,
+/* #home,
 #about,
-/* #skills, */
+#skills,
 #work,
 #other,
-#contact {
+#contact  */ {
   display: none;
 }
 
@@ -20,6 +20,7 @@
   }
   /* Nabar */
   #navbar {
+    visibility: hidden;
   }
   /* Home */
   #home {
@@ -116,7 +117,7 @@
   }
   .skills-icon li,
   .skills-icon img {
-    transform: scale(0.5);
+    transform: scale(0.7);
   }
   /* Work */
   .project {
