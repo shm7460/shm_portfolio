@@ -29,6 +29,7 @@
   .navbar__meun {
     width: 100%;
     margin-top: 80px;
+    display: none;
   }
   .navbar__meun.open {
     display: block;
