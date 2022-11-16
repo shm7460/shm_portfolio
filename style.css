@@ -294,7 +294,7 @@ p {
 
 /* Skill */
 #skills {
-  /* height: 80vh; */
+  height: 80vh;
 }
 .skills__container {
   display: flex;

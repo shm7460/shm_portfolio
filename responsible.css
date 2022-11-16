@@ -122,13 +122,16 @@
   }
 
   /* Skills */
+  #skills {
+    height: auto;
+  }
   .skills__container {
     display: flex;
     align-items: center;
     background: url(imgs/skills/skills_bg.png) no-repeat center center;
     background-size: cover;
-    height: auto;
   }
+
   .icon-boxs {
     width: 100%;
     display: flex;
