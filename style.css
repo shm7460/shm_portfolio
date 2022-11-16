@@ -126,16 +126,16 @@ p {
 }
 
 .navbar__meun__item {
-  padding: 15% 30%;
+  padding: 15% 25%;
   margin: 5px 4px;
   cursor: pointer;
   text-align: center;
   border-radius: var(--size-border-radius);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
 }
 .navbar__meun__item.active {
-  background-color: rgba(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .navbar__meun__item:hover {
   background-color: white;
@@ -304,41 +304,33 @@ p {
 }
 .black-box {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 65%;
   background-color: rgba(0, 0, 0, 0.45);
   color: white;
-  padding: 5% 20%;
+  padding-top: 50px;
 }
-.icon-box {
+.icon-boxs {
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.skills-icon {
   height: 100%;
+  width: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2% 0;
-}
-.skills-icon {
-  width: inherit;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
 }
-.skills-icon li {
-  font-size: 100px;
+.skills-icon li,
+.skills-icon img {
+  font-size: 80px;
+  margin-bottom: 50px;
 }
 
-.skills-percent {
-  width: inherit;
-  display: flex;
-  font-size: 50px;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0;
-}
 .counter:after {
   content: "%";
   margin-left: 5px;
@@ -458,7 +450,7 @@ p {
 }
 /* Other Works */
 #other {
-  /* height: 95vh; */
+  height: 95vh;
 }
 .section__other {
   width: 100%;
