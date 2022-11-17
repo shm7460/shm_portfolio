@@ -1,5 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap");
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
@@ -8,7 +13,7 @@ a {
   color: black;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "GmarketSansMedium";
   margin: 0;
 }
 section {
@@ -31,12 +36,10 @@ section {
   margin: 0 20px;
 }
 .login span {
-  font-family: "Nanum Gothic", sans-serif;
   display: block;
   margin: 10px 0;
   font-size: 18px;
   color: rgb(255, 255, 255);
-  font-weight: bold;
 }
 .login input[type="email"],
 .login input[type="password"] {
@@ -84,7 +87,9 @@ section {
 }
 .login p a {
   float: right;
-  color: white;
+  color: rgb(197, 197, 197);
+  letter-spacing: 1px;
+  font-size: 15px;
 }
 .login p a:hover {
   text-decoration: underline;
@@ -99,6 +104,7 @@ section {
   cursor: pointer;
   font-size: 24px;
   transition: 0.2s;
+  font-family: "GmarketSansMedium";
 }
 .login button:hover {
   background-color: rgb(20, 220, 20);
