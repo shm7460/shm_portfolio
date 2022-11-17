@@ -1,11 +1,11 @@
 #navbar,
-/* #home,
+#home,
 #about,
 #skills,
 #work,
 #other,
-#contact  */ {
-  display: none;
+#contact {
+  /* display: none; */
 }
 
 /* For below 768px screen width */
@@ -125,13 +125,10 @@
   #skills {
     height: auto;
   }
-  .skills__container {
-    display: flex;
-    align-items: center;
-    background: url(imgs/skills/skills_bg.png) no-repeat center center;
-    background-size: cover;
+  .black-box {
+    padding: 0px 0px;
+    padding: 20px 0;
   }
-
   .icon-boxs {
     width: 100%;
     display: flex;
@@ -141,9 +138,14 @@
   .icon-boxs > div {
     width: 50%;
   }
-  .skills-icon li,
+  .skills-icon i,
   .skills-icon img {
-    transform: scale(0.7);
+    transform: scale(0.6);
+    margin-bottom: 10px;
+  }
+  .counter {
+    font-size: 25px;
+    margin-bottom: 30px;
   }
   /* Work */
   .project {

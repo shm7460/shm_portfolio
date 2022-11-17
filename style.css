@@ -311,7 +311,8 @@ p {
   height: 65%;
   background-color: rgba(0, 0, 0, 0.45);
   color: white;
-  padding-top: 50px;
+  padding: 0 240px;
+  padding-top: 60px;
 }
 .icon-boxs {
   width: 100%;
@@ -326,12 +327,15 @@ p {
   align-items: center;
   justify-content: space-between;
 }
-.skills-icon li,
+.skills-icon i,
 .skills-icon img {
   font-size: 80px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
-
+.counter {
+  font-size: 50px;
+  margin-bottom: 60px;
+}
 .counter:after {
   content: "%";
   margin-left: 5px;
