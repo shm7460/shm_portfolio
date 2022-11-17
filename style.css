@@ -169,7 +169,7 @@ p {
 }
 .home__title {
   margin-bottom: 20px;
-  font-size: 60px;
+  font-size: 50px;
   color: white;
 }
 .home__container span {
@@ -190,7 +190,7 @@ p {
   color: rgb(226, 226, 226);
   font-size: 20px;
   font-weight: var(--weight-bold);
-  padding: 12px 25px;
+  padding: 11px 25px;
   border: 1px solid var(--color-light-grey);
   border-radius: var(--size-border-radius);
   transition: 0.3s;
@@ -253,7 +253,7 @@ p {
 .about-text p {
   font-family: "S-CoreDream-3Light";
   line-height: 1.8em;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -333,8 +333,8 @@ p {
   margin-bottom: 20px;
 }
 .counter {
-  font-size: 50px;
-  margin-bottom: 60px;
+  font-size: 35px;
+  margin-bottom: 50px;
 }
 .counter:after {
   content: "%";
@@ -462,7 +462,8 @@ p {
   width: 100%;
   height: inherit;
   display: flex;
-  padding: 5% 7%;
+  padding: 5% 8%;
+  padding-left: 3%;
   background-color: var(--color-black);
 }
 .other-title {
@@ -488,6 +489,10 @@ p {
   flex-direction: column;
   justify-content: space-between;
   width: 70%;
+  padding-right: 20px;
+}
+.top {
+  margin-bottom: 40px;
 }
 .top,
 .bottom {
@@ -497,8 +502,8 @@ p {
 }
 .box {
   position: relative;
-  width: 420px;
-  height: 400px;
+  width: 345px;
+  height: 365px;
   overflow: hidden;
 }
 .box:before {
@@ -506,7 +511,7 @@ p {
   content: "";
   width: inherit;
   height: inherit;
-  top: 320px;
+  top: 300px;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   transition: 0.5s;
@@ -542,7 +547,7 @@ p {
 }
 .box-inner {
   position: absolute;
-  top: 320px;
+  top: 290px;
   left: 0;
   width: inherit;
   height: inherit;
@@ -566,7 +571,7 @@ p {
   color: rgb(224, 224, 224);
 }
 .box-inner h1 {
-  font-size: 30px;
+  font-size: 24px;
   margin: 0;
   color: rgb(224, 224, 224);
   font-weight: 500;
@@ -579,7 +584,7 @@ p {
   border-bottom: 1px solid rgba(255, 255, 255, 0.39);
 }
 .box-inner p {
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 10px;
   color: rgb(212, 212, 212);
   line-height: 1.6em;
