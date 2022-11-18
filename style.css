@@ -444,11 +444,19 @@ ul.content li:first-child {
   color: white;
   font-size: 18px;
   line-height: 1.6em;
-  margin-bottom: 20%;
+  margin-bottom: 20px;
 }
-.project__description .site {
+.project__description .org {
+  margin-bottom: 50px;
+}
+.project__description .sites,
+.project__description span {
   color: white;
   display: block;
+  cursor: pointer;
+}
+.project__description .sites:hover {
+  color: #73aace;
 }
 .btns {
   display: flex;
@@ -472,9 +480,6 @@ ul.content li:first-child {
   color: black;
 }
 /* Other Works */
-#other {
-  /* height: 95vh; */
-}
 .section__other {
   width: 100%;
   height: inherit;
