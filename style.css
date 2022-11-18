@@ -442,7 +442,7 @@ ul.content li:first-child {
 }
 .project__description p {
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6em;
   margin-bottom: 20px;
 }
@@ -454,6 +454,7 @@ ul.content li:first-child {
   color: white;
   display: block;
   cursor: pointer;
+  font-size: 15px;
 }
 .project__description .sites:hover {
   color: #73aace;
