@@ -265,14 +265,12 @@ p {
 .about-license .title,
 .about-career .title {
   font-size: 32px;
-
   font-weight: bold;
 }
 .about-license .list,
 .about-career ul.list {
   display: flex;
 }
-
 .about-license .data,
 .about-career .data {
   font-size: 18px;
@@ -283,7 +281,6 @@ p {
   color: #3b3b3b;
   font-weight: 600;
 }
-
 ul.list li:last-child,
 ul.content li:first-child {
   font-size: 20px;
