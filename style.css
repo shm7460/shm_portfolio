@@ -446,6 +446,10 @@ ul.content li:first-child {
   line-height: 1.6em;
   margin-bottom: 20%;
 }
+.project__description .site {
+  color: white;
+  display: block;
+}
 .btns {
   display: flex;
   align-items: center;
