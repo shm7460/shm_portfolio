@@ -258,37 +258,52 @@ p {
   letter-spacing: 1px;
 }
 .about-bottom {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.about-license {
-  width: 60%;
-}
-.about-license .title {
-  font-size: 65px;
-  margin-bottom: 50px;
+.about-license .title,
+.about-career .title {
+  font-size: 32px;
+
   font-weight: bold;
-  color: #424242;
 }
-.about-license .list {
+.about-license .list,
+.about-career ul.list {
   display: flex;
-  align-items: center;
-  font-size: 22px;
-  font-weight: 600;
 }
-.about-license .list > li {
+
+.about-license .data,
+.about-career .data {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  margin-right: 25px;
   font-family: "S-CoreDream-3Light";
-}
-.about-license .list .data {
-  margin-right: 50px;
+  color: #3b3b3b;
   font-weight: 600;
+}
+
+ul.list li:last-child,
+ul.content li:first-child {
+  font-size: 20px;
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.about-career .content .text {
+  font-size: 16px;
+  font-weight: lighter;
+}
+.about-title {
+  margin-top: 72px;
 }
 .about-title .top-border {
   width: 100%;
   border-top: 1px solid black;
 }
 .about-title h1 {
-  font-size: 260px;
+  font-size: 200px;
   color: #303030;
 }
 
